@@ -10,7 +10,7 @@ This may change with future developments :)
 '''
 
 try:
-    import simplejson
+    import simplejson as json
 except ImportError:
     import json
 
@@ -103,7 +103,7 @@ def recursive_build_schema_summary(summary_dict, depth=0, join_strings=True):
     return '\n'.join(out_strs) if join_strings else out_strs
 
 def build_schema_from_list_of_dicts(ld):
-    return recursive_build_schema_summary(summarize_list_of_dicts(j))
+    return recursive_build_schema_summary(summarize_list_of_dicts(ld))
 
 def load_new_line_delimited_json(f):
     # Load the json to a list of dicts
