@@ -22,7 +22,7 @@ def get_first_non_empty_value(x):
     return None
 
 def check_if_all_same(x):
-    x0= x[0]
+    x0 = x[0]
     return all([i==x0 for i in x])
 
 def get_all_keys(ld):
@@ -55,6 +55,9 @@ def build_summary(l):
        * Are any elements dicts?
        * {Nested details...}
     '''
+    if not l:
+        return ('empty list', )
+    
     has_empty = None in l
     has_all_same = check_if_all_same(l)
     has_lists = any(type(i) == list for i in l)
