@@ -44,7 +44,7 @@ def flatten(x):
               for j in i]
 
 def dict_apply(f, d):
-    return {k: f(v) for k, v in d.iteritems()}
+    return {k: f(v) for k, v in d.items()}
 
 def build_summary(l):
     '''Return summary information about a list:
@@ -89,7 +89,7 @@ def get_attr_str(v):
 def recursive_build_schema_summary(summary_dict, depth=0, join_strings=True):
     out_strs = []
     indent = '    ' * depth
-    for k, v in summary_dict.iteritems():
+    for k, v in summary_dict.items():
         s = indent + str(k) + ':   ' + get_attr_str(v)
         out_strs.append(s)
         
